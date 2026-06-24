@@ -29,7 +29,7 @@ jobs:
         push: true
         tags: ${{ secrets.DOCKERHUB_USERNAME }}/modern-python-app:latest
 
-deploy:
+ deploy:
     runs-on: ubuntu-latest
     needs: build-and-push # Yeh tabhi chalega jab upar wala job successfully pass ho jayega
     steps:
