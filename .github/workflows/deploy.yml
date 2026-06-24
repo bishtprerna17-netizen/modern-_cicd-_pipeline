@@ -45,8 +45,8 @@ jobs:
             docker rm my-app-container || true
             
             # 2. DockerHub se ekदम fresh image pull karo
-            docker pull ${{ secrets.DOCKERHUB_USERNAME }}/my-app:latest
+            docker pull ${{ secrets.DOCKERHUB_USERNAME }}/modern-python-app:latest
             
             # 3. Naya container run karo
             # (Note: Agar port pata ho toh 80:80 ki jagah apna port change kar lena, abhi ke liye standard port 80 hai)
-            docker run -d --name my-app-container -p 80:80 ${{ secrets.DOCKERHUB_USERNAME }}/my-app:latest
+            docker run -d --name my-app-container -p 80:80 ${{ secrets.DOCKERHUB_USERNAME }}/modern-python-app:latest
